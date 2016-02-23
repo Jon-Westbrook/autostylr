@@ -2,11 +2,13 @@ body {width:100%;}
 
 .colorBox {width:50px;height:50px;}
 
-#logo {display:block;margin:0 auto;}
+#logo {display:block;margin:32px auto;}
 
 header {text-align:center;font-family:'helvetica neue',sans-serif;}
 
 .p {width: 400px; margin: 20px auto;font-family:'helvetica neue',sans-serif;text-align:left;}
+
+li {margin: 0;line-height: 26px;margin-left: 20px;}
 
 .blur {
     -webkit-filter: blur(5px);     
@@ -15,8 +17,27 @@ header {text-align:center;font-family:'helvetica neue',sans-serif;}
 
 .changerBox {text-align:center;margin:25px;}
 
-.changers {font-size:.5em;text-transform:uppercase;padding:20px}
+.changer {font-size:.5em;text-transform:uppercase;padding:20px}
 
 #copyright {display:block;margin:0 auto;width:400px;font-family:'helvetica neue',sans-serif;font-size:.5em;}
 
 h2 {padding-bottom: 20px;}
+
+.btn {
+  -webkit-border-radius: 9;
+  -moz-border-radius: 9;
+  border-radius: 9px;
+  font-family: Courier New;
+  color: #ffffff;
+  font-size: 20px;
+  background: #3498db;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 2px auto;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  text-decoration: none;
+}
