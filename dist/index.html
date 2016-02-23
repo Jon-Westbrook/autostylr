@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        	AlbumColors Crazy Test Yeah!
+        </title>
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" ></script>
+    	<script type="text/javascript" src="js/autostylr.js" ></script>
+    	<link rel="stylesheet" type="text/css" href="css/style.css" >	    
+    
+    </head>
+
+    <body id="body" class="">
+		<div class="changerBox">
+    		<a href="#" class="p changers">Das Ist Wunderbar!</a><br />
+        </div>
+
+        <img id="logo" src="images/logo0.png">
+
+        <script>
+
+			var images = ['images/logo0.png',
+			'images/logo1.png',
+			'images/logo2.png',
+			'images/logo3.png',
+			'images/logo4.png',
+			'images/logo5.png',
+			'images/logo6.png',
+			'images/logo7.jpg',
+			'images/logo8.png',
+			'images/logo9.png'
+			]
+
+			var i = 0;
+			var url = images[i];
+			makeStyle(url);
+
+			//change logo when clicking 'Das Ist Sheisse', and re-process
+			$('.changers').click(function() {
+				if (i == images.length - 1) {i=0} else {i++}
+				console.log(i);
+				//change which image the page style is based on, by changing URL assignment
+				url = images[i];
+				makeStyle(url);
+			});
+			
+			//set random image, then process colors and set css for background, h1, h2, and p elements
+			function makeStyle (url) {
+
+				$('#logo').attr('src',url);
+				albumColors = new AlbumColors(url);
+
+				albumColors.getColors(function(colors) {
+					bg = 'rgb(' + colors[0] + ')';
+					h1 = 'rgb(' + colors[1] + ')';
+					h2 = 'rgb(' + colors[2] + ')';
+					$('#body').css('background-color', bg);
+					$('#body').css('background-image', 'radial-gradient(' + bg + ',' + h2 + ')');
+					$('#h1').css('color', h1);
+					$('#h2').css('color', h2);
+					$('.p').css('color', h1);
+				});		
+			};
+
+		</script>
+	
+<header>
+		<h1 id="h1">Really Cool Portfolio</h1>
+		<h2 id="h2">Ok, if you say so!</h2>
+	</header>
+
+	<section>
+		<p class="p">What you're looking at is not your typical portfolio. This portfolio automatically styles itself.</p>
+
+		
+
+		<p class="p">Sed eget sapien sed risus congue dignissim at interdum nisl. Nulla sed sem et lacus cursus interdum. Fusce enim ipsum, sodales at quam vitae, pulvinar porttitor purus. Nullam efficitur nisl libero, eu pharetra dolor sagittis auctor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tincidunt euismod rhoncus. Fusce sit amet sem in nisl consectetur laoreet. Aliquam aliquam magna ex, volutpat faucibus diam luctus nec. Aliquam mollis venenatis magna, sed luctus ligula.</p>
+
+		<p class="p">Praesent venenatis felis nec mi dignissim finibus. Ut scelerisque justo quis nunc iaculis interdum. Nam sit amet tincidunt lorem. Vestibulum in massa nisi. Nullam fringilla mi at enim fermentum aliquam. Donec commodo tortor ac augue mollis, at sollicitudin nunc maximus. Maecenas cursus, massa vitae egestas dignissim, lorem tellus aliquet purus, ac facilisis orci dolor in mauris. Duis mi sem, malesuada ac ultricies id, vestibulum id eros. Proin in purus sit amet ante fermentum accumsan vel sed est. Duis sagittis, nibh eget varius maximus, arcu ex pellentesque urna, in pulvinar lorem quam sit amet eros. Morbi eget orci nulla.</p> 
+		
+	</section>
+
+	<footer>
+		<!--<copyright id="copyright">Thanks to <a href="https://github.com/chengyin/albumcolors">Chengyin Liu</a> for his albumcolors algorithm.</br>Redistributed under the <a href="http://opensource.org/licenses/NCSA">University of Illinois / NCSA License</a><copyright>-->
+		
+	</footer>
+
+    </body>
+</html>
