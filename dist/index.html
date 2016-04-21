@@ -19,30 +19,30 @@
         
 	
 <header>
-		<h1 id="h1">Really Cool Portfolio</h1>
+		<h1 id="h1">Really Cool Webpage</h1>
 		<h2 id="h2">Ok, if you say so!</h2>
 	</header>
 
 	<section>
-		<p class="p">What you're looking at is not your typical portfolio. This portfolio automatically styles itself.</p>
+		<p class="p">What you're looking at is not your typical webpage. This page automatically styles itself.</p>
 		
 		<div class="changerBox">
 			<a class="btn changer" href="#">DO IT!</a>
 		</div>
 
-		<p class="p">What's happening is that there are ten random test album cover images above. Everytime your hit "Do It!", a new random image is pulled from a folder, and the app reprocesses the image and automatically changes the page background color, h1, h2, and p colors. This methodology brings design consistency to any webpage. </p>
+		<p class="p">What's happening is that there are ten random test album cover images above. Everytime you hit "Do It!", a new random image is pulled from a folder, and the app re-processes the image, then automatically changes the page background color, h1, h2, and p colors. This methodology programatically brings design consistency to any webpage. </p>
 
 		<p class="p">The significance here is that very few websites in the world have been able to achieve this <i>without</i> human intervention! Future applications include: </p>
 
 			<ul class="p">
 				<li>Converted web pages for different devices</li>
 				<li>AdWords landing pages, automatically styled</li>
-				<li>User Profile pages, automatically matching the style of the profile pic</li>
-				<li>Any kind of blog of landing page</li>
+				<li>User profile pages, automatically matching the style of the user's profile pic</li>
+				<li>Any kind of blog or landing page</li>
 			</ul>
 		
 
-		<p class="p">I came up with this approach after having styled over 200 mobile websites. I realized to make any website attractive, your background color, h1, and h2 colors must be derived from the most popular colors in the logo or header image. Eventually I started experimenting with the programatic approach to discovering the key colors of an image, led me and then automatically applying them to key page elements. </p> 
+		<p class="p">I came up with this approach after having styled over 200 mobile websites. I realized to make any website attractive, your background color, h1, and h2 colors must be derived from the most popular colors in the logo or header image. Eventually I started experimenting with the programatic approach to discovering the key colors of an image, and then automatically applying them to key page elements. </p> 
 
 		<br /><br />
 		
@@ -88,18 +88,20 @@
 
 				albumColors.getColors(function(colors) {
 					bg = 'rgb(' + colors[0] + ')';
+					bg1 = 'rgba(' + colors[0] + ',' + '.6' + ')';
+					bg2 = 'rgba(' + colors[0] + ',' + '1' + ')';
 					h1 = 'rgb(' + colors[1] + ')';
 					h2 = 'rgb(' + colors[2] + ')';
-					$('#body').css('background-color', bg);
-					$('#body').css('background-image', 'radial-gradient(' + bg + ',' + h2 + ')');
+					$('#body').css('background','linear-gradient(to left' + ',' + bg1 + ',' + bg2 + ')');
 					$('#h1').css('color', h1);
 					$('#h2').css('color', h2);
 					$('.p').css('color', h1);
-					$('.btn').css('background', h1);
+					$('.btn').css('background', h2);
 					$('.btn').css('color', bg);
 
 					$('.btn').hover(function() {
-  						$(this).css('background',h2);
+  						$(this).css('background', h2);
+  						$(this).css('color', bg);
 					});
 				});		
 			};
