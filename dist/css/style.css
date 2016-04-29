@@ -4,9 +4,9 @@ body {width:100%;}
 
 #logo {display:block;margin:32px auto;}
 
-header {text-align:center;font-family:'helvetica neue',sans-serif;}
+header {text-align:center;font-family: 'Montserrat', sans-serif;}
 
-.p {width: 400px; margin: 20px auto;font-family:'helvetica neue',sans-serif;text-align:left;}
+.p {width: 400px; margin: 20px auto;font-family: 'Montserrat', sans-serif;text-align:left;}
 
 li {margin: 0;line-height: 26px;margin-left: 20px;}
 
