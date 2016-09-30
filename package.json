@@ -1,0 +1,26 @@
+{
+  "name": "autostylr",
+  "version": "1.0.0",
+  "description": "A test application that generates page styling based on a header image. ",
+  "main": "./dist/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TacticalSneeze/autostylr.git"
+  },
+  "author": "Jonathon Westbrook",
+  "license": "NCSA",
+  "bugs": {
+    "url": "https://github.com/TacticalSneeze/autostylr/issues"
+  },
+  "homepage": "https://github.com/TacticalSneeze/autostylr#readme",
+  "devDependencies": {
+    "browser-sync": "^2.17.0",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-changed": "^1.3.2",
+    "gulp-util": "^3.0.7"
+  }
+}
