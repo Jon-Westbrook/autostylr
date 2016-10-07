@@ -47,7 +47,7 @@ gulp.task('serve', function() {
 });
 
 // Type 'gulp' (no args) to start server
-gulp.task('default', ['cleanall', 'copyall', 'serve']);
+gulp.task('default', ['serve']);
 
 
 
